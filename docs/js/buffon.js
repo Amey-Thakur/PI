@@ -25,7 +25,7 @@
   var CHUNK = 50;
 
   body.innerHTML =
-    '<canvas class="lab-canvas"></canvas>' +
+    '<canvas class="lab-canvas" role="img" aria-label="Needles scattered across a lined floor"></canvas>' +
     '<div class="lab-controls">' +
       '<button type="button" class="btn btn-primary" data-drop="100">Drop 100</button>' +
       '<button type="button" class="btn" data-drop="1000">Drop 1,000</button>' +

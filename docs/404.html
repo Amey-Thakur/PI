@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+  Name: 404.html
+  Purpose: A soft landing for lost visitors.
+  Description: GitHub Pages serves this for any missing path. One screen,
+    one joke, one way home. Reuses the site stylesheet so even the error
+    page stays on theme.
+  Tech Stack: Plain HTML and CSS
+  License: MIT
+  Author: Amey Thakur (https://github.com/Amey-Thakur)
+  Date: 2026-07-18
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 · PI</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<script>
+  try {
+    var stored = localStorage.getItem("pi-theme");
+    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
+  } catch (_) {}
+</script>
+</head>
+<body>
+
+<section class="hero wrap">
+  <h1>Position <em>404</em></h1>
+  <p class="lede">In &#x3C0;, the digits 404 first appear at decimal position 1272.
+    This page, however, does not appear anywhere.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="./">Back to &#x3C0;</a>
+  </div>
+</section>
+
+</body>
+</html>

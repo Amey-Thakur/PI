@@ -24,6 +24,8 @@
 
   var canvas = document.createElement("canvas");
   canvas.className = "lab-canvas";
+  canvas.setAttribute("role", "img");
+  canvas.setAttribute("aria-label", "Random darts landing on a square with an inscribed circle");
   body.appendChild(canvas);
 
   var controls = document.createElement("div");

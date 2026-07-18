@@ -29,6 +29,8 @@
 
   var canvas = document.createElement("canvas");
   canvas.className = "lab-canvas";
+  canvas.setAttribute("role", "img");
+  canvas.setAttribute("aria-label", "A winding path drawn by following the digits of pi");
 
   var controls = document.createElement("div");
   controls.className = "lab-controls";
