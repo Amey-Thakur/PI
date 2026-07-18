@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amey-thakur.github.io/PI/sitemap.xml

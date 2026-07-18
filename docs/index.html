@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+  Name: index.html
+  Purpose: The complete PI experience on one page.
+  Description: Hero, quest badges, eight interactive labs, the history
+    timeline with a quiz, record tiles, and a formula wall. Every script is
+    local and every byte is served from this folder: the page works from a
+    file system, an airplane, or GitHub Pages exactly the same way.
+  Tech Stack: Plain HTML, CSS, and JavaScript, no build step
+  License: MIT
+  Author: Amey Thakur (https://github.com/Amey-Thakur)
+  Date: 2026-07-18
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PI · everything about the number pi</title>
+<meta name="description" content="Learn pi by playing with it: memorize digits, find your birthday in a million decimals, throw Monte Carlo darts, drop Buffon needles, hear pi as music, and walk 4,000 years of history. Verified digits, working algorithms in three languages, and a written atlas. Free and open source.">
+<meta name="keywords" content="pi, 3.14159, digits of pi, pi day, compute pi, chudnovsky, monte carlo pi, buffon needle, memorize pi, pi history, pi algorithms">
+<meta property="og:title" content="PI · everything about the number pi">
+<meta property="og:description" content="A gamified home for the most famous number in mathematics: digit games, simulations, music, history, and verified data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amey-thakur.github.io/PI/">
+<meta property="og:image" content="https://amey-thakur.github.io/PI/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://amey-thakur.github.io/PI/social-preview.png">
+<link rel="canonical" href="https://amey-thakur.github.io/PI/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Applies the stored theme before first paint, so the page never flashes. */
+  try {
+    var stored = localStorage.getItem("pi-theme");
+    if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme", stored);
+  } catch (_) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PI",
+  "url": "https://amey-thakur.github.io/PI/",
+  "description": "An interactive, open source home for the number pi: digit games, simulations, algorithms, history, and verified datasets.",
+  "author": { "@type": "Person", "name": "Amey Thakur", "url": "https://github.com/Amey-Thakur" }
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="logo" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true">
+        <!-- The ring never closes: the digits never end. -->
+        <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="5"
+                stroke-linecap="round" stroke-dasharray="149 999" transform="rotate(-55 32 32)"/>
+        <text x="32" y="43" text-anchor="middle" font-family="Georgia, serif"
+              font-size="31" fill="currentColor">&#x3C0;</text>
+      </svg>
+      PI
+    </a>
+    <nav class="site-nav">
+      <a href="#quest">Quest</a>
+      <a href="#labs">Labs</a>
+      <a href="#timeline">History</a>
+      <a href="#records">Records</a>
+      <a href="https://github.com/Amey-Thakur/PI" rel="noopener">GitHub</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+      <span class="knob" aria-hidden="true">&#9788;</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <h1>&#x3C0; is not just <em>3.14159</em></h1>
+    <p class="lede">It is 4,000 years of human effort, an unproven mystery, and the most
+      computed number on Earth. This site lets you play with all of it.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#quest">Start the quest</a>
+      <a class="btn" href="https://github.com/Amey-Thakur/PI#readme" rel="noopener">Read the atlas</a>
+    </div>
+    <div class="ticker" id="ticker" aria-hidden="true"></div>
+  </section>
+
+  <section class="section" id="quest">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The Pi Quest</p>
+        <h2>Eight badges. One number.</h2>
+        <p>Every lab on this page can earn you a badge. Progress stays in your
+          browser and nowhere else. Collect all eight to finish the quest.</p>
+      </div>
+      <div class="badge-strip" id="badge-strip"></div>
+      <p class="quest-count" id="quest-count"></p>
+    </div>
+  </section>
+
+  <section class="section" id="labs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Labs</p>
+        <h2>Play with the number itself</h2>
+        <p>Every simulation runs live in your browser against a million
+          verified digits. No servers, no libraries, no tracking.</p>
+      </div>
+
+      <div class="lab-grid">
+
+        <article class="lab" id="lab-trainer">
+          <h3>Digit Trainer <span class="tag">memory</span></h3>
+          <p class="lab-note">Type the decimals of &#x3C0; from memory, one digit at a
+            time. Three misses ends the run. 10 digits earns a badge, 25 makes
+            you a memory athlete in training.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-search">
+          <h3>Digit Search <span class="tag">discovery</span></h3>
+          <p class="lab-note">Your birthday, your lucky number, any string of
+            digits: if it is in the first million decimals, this finds where
+            it first appears.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-montecarlo">
+          <h3>Monte Carlo <span class="tag">simulation</span></h3>
+          <p class="lab-note">Throw random darts at a square with a circle
+            inside. The fraction that lands inside the circle estimates
+            &#x3C0;. Watch chance converge on a constant.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-buffon">
+          <h3>Buffon's Needle <span class="tag">simulation</span></h3>
+          <p class="lab-note">Drop needles on a lined floor, as Georges-Louis
+            Leclerc proposed in 1777. The share that crosses a line hides
+            &#x3C0; inside it. The oldest random experiment there is.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-walk">
+          <h3>Digit Walk <span class="tag">art</span></h3>
+          <p class="lab-note">Each digit 0 to 9 becomes a direction of travel.
+            Following the decimals of &#x3C0; step by step draws a path no one
+            designed. Randomness you can look at.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-spiral">
+          <h3>Digit Spiral <span class="tag">art</span></h3>
+          <p class="lab-note">Thousands of digits wound into a spiral, each
+            digit colored by its value. Structure would show up as bands or
+            streaks. None appear.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-melody">
+          <h3>Pi Melody <span class="tag">sound</span></h3>
+          <p class="lab-note">The decimals mapped onto a pentatonic scale and
+            played in sequence. Since &#x3C0; never repeats, neither does the
+            tune. Press play and listen to a number.</p>
+          <div class="lab-body"></div>
+        </article>
+
+        <article class="lab" id="lab-frequency">
+          <h3>Digit Census <span class="tag">statistics</span></h3>
+          <p class="lab-note">How often does each digit 0 to 9 actually appear?
+            If &#x3C0; is normal, each should approach ten percent. Compare the
+            first thousand decimals against the first million.</p>
+          <div class="lab-body"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="timeline">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">History</p>
+        <h2>Four thousand years of chasing &#x3C0;</h2>
+        <p>From a Babylonian clay tablet to 314 trillion digits on a single
+          server. Every entry below is a real person or machine pushing the
+          same number a little further.</p>
+      </div>
+      <ol class="timeline" id="timeline-track"></ol>
+      <div class="quiz-box" id="timeline-quiz"></div>
+    </div>
+  </section>
+
+  <section class="section" id="records">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Records</p>
+        <h2>The state of the art</h2>
+        <p>Where the limits stood in mid 2026. Sources and the full record
+          table live in the atlas.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="big">314 trillion</div>
+          <div class="label">digits computed by StorageReview and Micron in
+            November 2025, on one server running y-cruncher for 110 days</div>
+        </div>
+        <div class="stat">
+          <div class="big">300 trillion</div>
+          <div class="label">digits verified by Guinness World Records for
+            Kioxia and Linus Media Group in May 2025</div>
+        </div>
+        <div class="stat">
+          <div class="big">70,000</div>
+          <div class="label">decimals recited from memory by Rajveer Meena in
+            2015, blindfolded, over nearly ten hours</div>
+        </div>
+        <div class="stat">
+          <div class="big">62 digits</div>
+          <div class="label">are all NASA ever needs: 15 decimals steer
+            interplanetary spacecraft, 37 would size the visible universe to
+            within one hydrogen atom</div>
+        </div>
+        <div class="stat">
+          <div class="big">1706</div>
+          <div class="label">the year William Jones first wrote the symbol
+            &#x3C0; for this number, later fixed forever by Euler</div>
+        </div>
+        <div class="stat">
+          <div class="big">Unproven</div>
+          <div class="label">whether every digit sequence appears in &#x3C0;.
+            Normality is believed by everyone and proved by no one</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="formulas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Formula wall</p>
+        <h2>Six ways to write the same number</h2>
+        <p>Each of these is exact. Each was a landmark. The atlas walks
+          through where every one of them comes from.</p>
+      </div>
+      <div class="formula-grid">
+        <div class="formula">
+          <div class="math">
+            <span class="frac"><span class="num">&#x3C0;</span><span class="den">4</span></span>
+            <span>=</span><span>1</span><span>&#8722;</span>
+            <span class="frac"><span class="num">1</span><span class="den">3</span></span>
+            <span>+</span>
+            <span class="frac"><span class="num">1</span><span class="den">5</span></span>
+            <span>&#8722;</span>
+            <span class="frac"><span class="num">1</span><span class="den">7</span></span>
+            <span>+</span><span>&#8943;</span>
+          </div>
+          <p class="cap"><b>Madhava, Gregory, Leibniz.</b> The most famous
+            series and the slowest: 300 terms buy you two digits.</p>
+        </div>
+        <div class="formula">
+          <div class="math">
+            <span class="frac"><span class="num">&#x3C0;</span><span class="den">2</span></span>
+            <span>=</span>
+            <span class="frac"><span class="num">2</span><span class="den">1</span></span>
+            <span>&#183;</span>
+            <span class="frac"><span class="num">2</span><span class="den">3</span></span>
+            <span>&#183;</span>
+            <span class="frac"><span class="num">4</span><span class="den">3</span></span>
+            <span>&#183;</span>
+            <span class="frac"><span class="num">4</span><span class="den">5</span></span>
+            <span>&#183;</span>
+            <span class="frac"><span class="num">6</span><span class="den">5</span></span>
+            <span>&#183;</span>
+            <span class="frac"><span class="num">6</span><span class="den">7</span></span>
+            <span>&#8943;</span>
+          </div>
+          <p class="cap"><b>Wallis, 1655.</b> An infinite product from even and
+            odd numbers alone, found before calculus existed.</p>
+        </div>
+        <div class="formula">
+          <div class="math">
+            <span class="frac"><span class="num">&#x3C0;&#178;</span><span class="den">6</span></span>
+            <span>=</span><span>1</span><span>+</span>
+            <span class="frac"><span class="num">1</span><span class="den">2&#178;</span></span>
+            <span>+</span>
+            <span class="frac"><span class="num">1</span><span class="den">3&#178;</span></span>
+            <span>+</span>
+            <span class="frac"><span class="num">1</span><span class="den">4&#178;</span></span>
+            <span>+</span><span>&#8943;</span>
+          </div>
+          <p class="cap"><b>Euler, 1734.</b> The Basel problem: the squares of
+            the whole numbers conspire to produce &#x3C0;.</p>
+        </div>
+        <div class="formula">
+          <div class="math">
+            <span><i>e</i><sup><i>i</i>&#x3C0;</sup> + 1 = 0</span>
+          </div>
+          <p class="cap"><b>Euler's identity.</b> Five fundamental constants in
+            one line, regularly voted the most beautiful equation.</p>
+        </div>
+        <div class="formula wide">
+          <div class="math">
+            <span>&#x3C0;</span><span>=</span>
+            <span class="sum"><span class="lim">&#8734;</span><span class="sigma">&#931;</span><span class="lim"><i>k</i>=0</span></span>
+            <span class="frac"><span class="num">1</span><span class="den">16<sup><i>k</i></sup></span></span>
+            <span>(</span>
+            <span class="frac"><span class="num">4</span><span class="den">8<i>k</i>+1</span></span>
+            <span>&#8722;</span>
+            <span class="frac"><span class="num">2</span><span class="den">8<i>k</i>+4</span></span>
+            <span>&#8722;</span>
+            <span class="frac"><span class="num">1</span><span class="den">8<i>k</i>+5</span></span>
+            <span>&#8722;</span>
+            <span class="frac"><span class="num">1</span><span class="den">8<i>k</i>+6</span></span>
+            <span>)</span>
+          </div>
+          <p class="cap"><b>Bailey, Borwein, Plouffe, 1995.</b> Extracts any
+            hexadecimal digit of &#x3C0; without computing the ones before it.</p>
+        </div>
+        <div class="formula wide">
+          <div class="math">
+            <span class="frac"><span class="num">1</span><span class="den">&#x3C0;</span></span>
+            <span>=</span><span>12</span>
+            <span class="sum"><span class="lim">&#8734;</span><span class="sigma">&#931;</span><span class="lim"><i>k</i>=0</span></span>
+            <span class="frac">
+              <span class="num">(&#8722;1)<sup><i>k</i></sup> (6<i>k</i>)! (13591409 + 545140134<i>k</i>)</span>
+              <span class="den">(3<i>k</i>)! (<i>k</i>!)&#179; 640320<sup>3<i>k</i>+3/2</sup></span>
+            </span>
+          </div>
+          <p class="cap"><b>Chudnovsky brothers, 1988.</b> Fourteen digits per
+            term. Every world record since 1989, and this site's own digits,
+            come from this series.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true">
+      <circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="5"
+              stroke-linecap="round" stroke-dasharray="149 999" transform="rotate(-55 32 32)"/>
+      <text x="32" y="43" text-anchor="middle" font-family="Georgia, serif"
+            font-size="31" fill="currentColor">&#x3C0;</text>
+    </svg>
+    <span>PI · an open source atlas of the number pi</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/Amey-Thakur/PI" rel="noopener">Source</a>
+    <a href="https://github.com/Amey-Thakur/PI/blob/main/LICENSE" rel="noopener">MIT License</a>
+    <a href="https://github.com/Amey-Thakur" rel="noopener">Amey Thakur</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/theme.js"></script>
+<script src="js/digits.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/quest.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/trainer.js"></script>
+<script src="js/search.js"></script>
+<script src="js/montecarlo.js"></script>
+<script src="js/buffon.js"></script>
+<script src="js/walk.js"></script>
+<script src="js/spiral.js"></script>
+<script src="js/melody.js"></script>
+<script src="js/frequency.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/reveal.js"></script>
+</body>
+</html>
