@@ -1,0 +1,69 @@
+# Name: verify.yml
+# Purpose: Prove the repository's claims on every push.
+# Description: The README promises that the digits are dual-verified and
+#   that every algorithm runs and prints true digits. Promises rot; CI does
+#   not. The digits job recomputes a million decimals with Gauss-Legendre
+#   and fails if the committed data drifts by one digit. The algorithms job
+#   executes every implementation in all three languages.
+# License: MIT
+# Author: Amey Thakur (https://github.com/Amey-Thakur)
+# Date: 2026-07-18
+
+name: verify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "algorithms/**"
+      - ".github/workflows/verify.yml"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  digits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify a million decimals against an independent algorithm
+        run: python scripts/verify_digits.py
+      - name: Confirm the published statistics match the data
+        run: |
+          python scripts/digit_stats.py
+          git diff --exit-code data/digit-frequency.json
+
+  algorithms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run every Python implementation
+        run: |
+          for f in algorithms/python/*.py; do
+            echo "== $f"
+            python "$f"
+          done
+      - name: Run every JavaScript implementation
+        run: |
+          for f in algorithms/javascript/*.js; do
+            echo "== $f"
+            node "$f"
+          done
+      - name: Compile and run every Rust implementation
+        run: |
+          for f in algorithms/rust/*.rs; do
+            echo "== $f"
+            out="/tmp/$(basename "$f" .rs)"
+            rustc -O "$f" -o "$out"
+            "$out"
+          done
