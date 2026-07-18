@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the datasets, code, or atlas from this repository, please cite it."
+title: "PI: an open source atlas of the number pi"
+type: software
+authors:
+  - family-names: Thakur
+    given-names: Amey
+repository-code: "https://github.com/Amey-Thakur/PI"
+url: "https://amey-thakur.github.io/PI/"
+license: MIT
+date-released: "2026-07-18"
+keywords:
+  - pi
+  - mathematics
+  - algorithms
+  - visualization
+  - education

@@ -1,0 +1,17 @@
+# Session tooling
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Compiled algorithm demos
+*.exe
+*.o
+*.out
+
+# Editors
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
