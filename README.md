@@ -22,6 +22,7 @@ play, an atlas you can read, algorithms you can run, and a million digits you
 can trust.
 
 **[Play the site](https://amey-thakur.github.io/PI/)** ·
+[See the digits](DIGITS.md) ·
 [Read the atlas](atlas/README.md) ·
 [Run the algorithms](algorithms/README.md) ·
 [Climb the challenges](challenges/README.md)
