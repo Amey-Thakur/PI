@@ -6,6 +6,7 @@
  *   pattern it would surface as bands or streaks; the point of the picture is
  *   that none do. Larger views pull in the streamed file, and drawing happens
  *   in per-frame chunks so the page never locks up.
+ * Usage: Loaded by docs/index.html; renders into #lab-spiral .lab-body.
  * Tech Stack: Plain JavaScript
  * License: MIT
  * Author: Amey Thakur (https://github.com/Amey-Thakur)
@@ -37,7 +38,7 @@
       '<button type="button" class="btn" data-count="5000">5,000</button>' +
       '<button type="button" class="btn" data-count="10000">10,000</button>' +
     "</div>" +
-    '<canvas class="lab-canvas"></canvas>' +
+    '<canvas class="lab-canvas" role="img" aria-label="Digits of pi wound into a colored spiral"></canvas>' +
     '<div class="lab-stat">' + LEGEND + "</div>";
 
   var canvas = body.querySelector("canvas");
