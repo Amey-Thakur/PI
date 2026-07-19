@@ -67,6 +67,9 @@ definition of π to what nobody has managed to prove about it:
 9. [Pi in culture](atlas/09-culture.md)
 10. [Further reading](atlas/10-reading.md)
 
+Plus a [glossary](atlas/glossary.md) that defines every technical term the
+repository uses, so no page ever assumes what another page teaches.
+
 ## The algorithms
 
 Twenty two working implementations in [`algorithms/`](algorithms/README.md),

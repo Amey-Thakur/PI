@@ -53,6 +53,9 @@
 
 * { box-sizing: border-box; }
 
+/* The hidden attribute must always win, even over display rules below. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -616,23 +619,28 @@ code { font-family: var(--mono); font-size: 0.92em; }
   .reveal.in { opacity: 1; transform: none; }
 }
 
-/* Study grid: digits in memory-sized bites of five. */
+/* Study grid: digits in memory-sized bites of five. Compact by design so
+   the card stays one screen tall; it swaps in for the keypad, never stacks. */
 .study-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 7px;
+  max-height: 208px;
+  overflow-y: auto;
   font-family: var(--mono);
 }
 .study-grid span {
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 15px;
-  letter-spacing: 2px;
+  padding: 5px 0;
+  font-size: 13.5px;
+  letter-spacing: 1.5px;
   color: var(--text-2);
+  text-align: center;
+  white-space: nowrap;
 }
-.study-grid span b { color: var(--accent); font-weight: 400; }
+.study-grid span b { color: var(--accent); font-weight: 400; font-size: 11px; }
 
 /* ---------- small screens ---------- */
 
