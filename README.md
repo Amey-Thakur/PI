@@ -122,8 +122,8 @@ repository scale. Regenerate everything yourself with two commands.
 ## Contributing
 
 Corrections, new algorithm implementations, and new challenges are welcome.
-Read [CONTRIBUTING.md](CONTRIBUTING.md) first: this repository has strict
-style rules, and every claim and every digit must be verifiable.
+[CONTRIBUTING.md](CONTRIBUTING.md) explains the bar: every claim and every
+digit here is verifiable, and contributions hold the same standard.
 
 ## License
 
@@ -152,7 +152,8 @@ sake; if a detail did not earn its place, it is not in this repository.
 
 Celebrated on March 14 and July 22. Read all year.
 
-Made with care by [Amey Thakur](https://github.com/Amey-Thakur).
-If π earned a place in your bookmarks, a star helps others find it.
+Built and maintained by [Amey Thakur](https://github.com/Amey-Thakur) ·
+[MIT](LICENSE) · corrections welcome through
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
 </div>
