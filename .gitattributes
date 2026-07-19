@@ -1,0 +1,13 @@
+# Name: .gitattributes
+# Purpose: One line-ending truth for every platform.
+# Description: Text is stored as LF no matter which OS commits it, so the
+#   digit files and scripts hash identically everywhere and diffs never
+#   drown in line-ending noise. Images stay untouched bytes.
+# License: MIT
+# Author: Amey Thakur (https://github.com/Amey-Thakur)
+# Date: 2026-07-18
+
+* text=auto eol=lf
+
+*.png binary
+*.ttf binary
