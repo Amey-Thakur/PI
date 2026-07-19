@@ -1,11 +1,13 @@
 /*
  * Name: style.css
  * Purpose: The complete design system for the PI site.
- * Description: One stylesheet for the whole experience. Dark is the default
- *   because the site opens on a stream of glowing digits; light mode is a
- *   warm paper theme. Every color lives in a variable so the canvas labs can
- *   read them at runtime and stay in tune with the active theme. System
- *   fonts only: the site must work with the network cable unplugged.
+ * Description: One stylesheet for the whole experience. The palette is
+ *   derived from pi itself: in hexadecimal pi is 3.243F6A88..., and reading
+ *   those fractional digits as a color gives #243F6A, the deep blue this
+ *   dark theme is built on (borders wear it exactly). The gold accent is
+ *   that blue's complement, and light mode is pastry cream for the Pi Day
+ *   pie. Every color lives in a variable so the canvas labs can read them
+ *   at runtime. System fonts only: the site works with the cable unplugged.
  * Tech Stack: Plain CSS, no build step
  * License: MIT
  * Author: Amey Thakur (https://github.com/Amey-Thakur)
@@ -13,18 +15,21 @@
  */
 
 :root {
-  --bg: #0b0d12;
-  --surface: #12151d;
-  --surface-2: #181c26;
-  --border: #262b38;
-  --text-1: #eef1f6;
-  --text-2: #aab2c0;
-  --text-3: #717a8a;
-  --accent: #e6b357;
-  --accent-soft: rgba(230, 179, 87, 0.14);
+  /* Pi in hexadecimal is 3.243F6A88...; #243F6A is therefore the color of
+     pi, and every shade below is that blue scaled darker. The accent is
+     its complement: pi's own opposite, which lands on pie-crust gold. */
+  --bg: #0c1523;
+  --surface: #132137;
+  --surface-2: #182b48;
+  --border: #243f6a;
+  --text-1: #edf1f8;
+  --text-2: #a8b3c8;
+  --text-3: #6e7c96;
+  --accent: #e6af56;
+  --accent-soft: rgba(230, 175, 86, 0.14);
   --good: #6fbf8f;
   --bad: #d97b6c;
-  --ink: #0b0d12;
+  --ink: #0c1523;
   --radius: 14px;
   --radius-pill: 999px;
   --mono: ui-monospace, "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;

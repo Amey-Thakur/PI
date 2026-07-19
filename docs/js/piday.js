@@ -41,7 +41,7 @@
   if (days === 0) {
     el.innerHTML = "Happy <b>" + soonest.name + "</b>. You picked the right day to be here.";
   } else {
-    el.innerHTML = soonest.name + " is <b>" + days + "</b> " +
-      (days === 1 ? "day" : "days") + " away.";
+    el.innerHTML = "Next pi holiday: " + soonest.name + ", <b>" + days + "</b> " +
+      (days === 1 ? "day" : "days") + " from today.";
   }
 })();
