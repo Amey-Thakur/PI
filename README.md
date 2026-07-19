@@ -137,11 +137,22 @@ theme is built on. The gold accent is that blue's exact complement, and light
 mode is pastry cream, for the pie. Nothing here is decoration for its own
 sake; if a detail did not earn its place, it is not in this repository.
 
+---
+
 <div align="center">
 
-Made with care by [Amey Thakur](https://github.com/Amey-Thakur).
-If π earned a place in your bookmarks, a star helps others find this.
+**[Site](https://amey-thakur.github.io/PI/) ·
+[Digits](DIGITS.md) ·
+[Atlas](atlas/README.md) ·
+[Algorithms](algorithms/README.md) ·
+[Challenges](challenges/README.md) ·
+[Data](data/README.md)**
 
-**3.14159 26535 89793 23846 26433 83279 50288 ...**
+`3.14159 26535 89793 23846 26433 83279 50288 41971 69399 37510 ...`
+
+Celebrated on March 14 and July 22. Read all year.
+
+Made with care by [Amey Thakur](https://github.com/Amey-Thakur).
+If π earned a place in your bookmarks, a star helps others find it.
 
 </div>
