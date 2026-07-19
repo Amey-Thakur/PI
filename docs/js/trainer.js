@@ -99,9 +99,13 @@
     }
   }
 
+  /* Study and play trade places instead of stacking, so the card keeps
+     one compact height and the keypad never sinks below the fold. */
   function setStudy(open) {
     grid.hidden = !open;
-    studyBtn.textContent = open ? "Hide" : "Study";
+    keypad.hidden = open;
+    trail.hidden = open;
+    studyBtn.textContent = open ? "Play" : "Study";
   }
 
   buildStudy();

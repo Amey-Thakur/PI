@@ -29,6 +29,7 @@ jump to whatever pulls at you.
 | [08 · Pi in the physical world](08-pi-in-science.md) | Why a circle constant runs statistics, radio, and quantum mechanics: symmetry and bell curves |
 | [09 · Pi in culture](09-culture.md) | The holiday, the poems, the song, the film, and one confused piece of 1897 legislation |
 | [10 · Further reading](10-reading.md) | The books, papers, and sites worth your hours, each labeled for who it fits |
+| [Glossary](glossary.md) | Every technical term in this repository, defined cold in one alphabet |
 
 When reading turns into wanting to do: the [algorithms](../algorithms/README.md)
 run in seconds, and the [challenge ladder](../challenges/README.md) starts
