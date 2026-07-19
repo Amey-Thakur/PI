@@ -126,6 +126,14 @@ style rules, and every claim and every digit must be verifiable.
 
 [MIT](LICENSE). Use anything here for anything, with attribution.
 
+## Colophon
+
+Even the colors are π. In hexadecimal, π is 3.243F6A88..., and reading those
+fractional digits as a color gives `#243F6A`, the deep blue the site's dark
+theme is built on. The gold accent is that blue's exact complement, and light
+mode is pastry cream, for the pie. Nothing here is decoration for its own
+sake; if a detail did not earn its place, it is not in this repository.
+
 <div align="center">
 
 Made with care by [Amey Thakur](https://github.com/Amey-Thakur).

@@ -22,7 +22,7 @@
 
   /* Fixed by design so a digit keeps its color when the theme flips. */
   var PALETTE = [
-    "#e6b357", "#d97b6c", "#6fbf8f", "#5aa7d1", "#a58ad6",
+    "#e6af56", "#d97b6c", "#6fbf8f", "#5aa7d1", "#a58ad6",
     "#d1a3c4", "#c9c46a", "#7fc7bd", "#c98a5a", "#8a93c9"
   ];
 
