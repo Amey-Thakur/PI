@@ -27,6 +27,13 @@ can trust.
 [Run the algorithms](algorithms/README.md) ·
 [Climb the challenges](challenges/README.md)
 
+<br>
+
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+[![Digits](https://img.shields.io/badge/Digits-1%2C000%2C000-3949AB)](DIGITS.md)
+[![Technology](https://img.shields.io/badge/Technology-Python_%7C_JavaScript_%7C_Rust-8250DF)](https://github.com/Amey-Thakur/PI)
+[![Developed by](https://img.shields.io/badge/Developed_by-Amey_Thakur-0969DA)](https://github.com/Amey-Thakur)
+
 </div>
 
 ---
