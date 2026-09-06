@@ -73,17 +73,16 @@ Five wings, one subject. Pick the door that matches why you came.
 page. Eight labs turn π into something you operate rather than read about, and
 each one is wired to a badge with a threshold you have to actually reach.
 
-| Lab | What happens | Badge | Earned by |
-| :--- | :--- | :--- | :--- |
-| Digit Trainer | Recite π from memory, three misses and you are out | First Digits | 10 decimals |
-| Digit Trainer | | Memory of Pi | 25 decimals |
-| Digit Search | Find your birthday inside a million decimals | Digit Hunter | any number found |
-| Monte Carlo | Watch random darts converge on π | Estimator | 10,000 darts |
-| Buffon's Needle | The 1777 experiment, live on a lined floor | Needle Dropper | 1,000 needles |
-| Digit Walk | The decimals steer a walker across the canvas | Wanderer | 5,000 steps |
-| Digit Spiral | Ten thousand digits wound into colored rings | | |
-| Pi Melody | The digits played on a pentatonic scale | Composer | 32 notes |
-| Digit Census | Frequency of 0 to 9, tested with chi-square | | |
+| # | Lab | What happens | Badge | Earned by |
+| :-: | :--- | :--- | :--- | :--- |
+| 1 | Digit Trainer | Recite π from memory, three misses and you are out | First Digits<br>Memory of Pi | 10 decimals<br>25 decimals |
+| 2 | Digit Search | Find your birthday inside a million decimals | Digit Hunter | any number found |
+| 3 | Monte Carlo | Watch random darts converge on π | Estimator | 10,000 darts |
+| 4 | Buffon's Needle | The 1777 experiment, live on a lined floor | Needle Dropper | 1,000 needles |
+| 5 | Digit Walk | The decimals steer a walker across the canvas | Wanderer | 5,000 steps |
+| 6 | Digit Spiral | Ten thousand digits wound into colored rings | — | — |
+| 7 | Pi Melody | The digits played on a pentatonic scale | Composer | 32 notes |
+| 8 | Digit Census | Frequency of 0 to 9, tested with chi-square | — | — |
 
 Alongside the labs sit a **history quiz** of five questions spanning 4,000
 years, which earns the **Historian** badge for a clean sweep, and a timeline,
