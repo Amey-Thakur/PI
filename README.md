@@ -65,6 +65,33 @@ Five wings, one subject. Pick the door that matches why you came.
 
 <br>
 
+### π has two birthdays
+
+| Date | Written | Why | Read |
+| :--- | :--- | :--- | :--- |
+| **14 March** | 3/14 | The opening of its decimal | [Pi Day](https://github.com/Amey-Thakur/PI/discussions/2) |
+| **22 July** | 22/7 | Its friendliest fraction | [Pi Approximation Day](https://github.com/Amey-Thakur/PI/discussions/3) |
+
+The March holiday is named after 3.14. The July one is named after 22/7. Only
+one of them is a good approximation, and it is not the famous one:
+
+| Approximation | Value | Error |
+| :--- | :--- | ---: |
+| **22/7** | 3.142857142857… | 0.00126 |
+| 3.14 | 3.140000000000… | 0.00159 |
+
+Two digits over one lands closer to π than the decimal the better-known
+holiday is named for. That fraction is not folklore either: it is the upper
+half of the bound Archimedes *proved* around 250 BCE, $\frac{223}{71} < \pi <
+\frac{22}{7}$, by trapping the circle between two 96-sided polygons. Beating
+it took another seven centuries and Zu Chongzhi's $\frac{355}{113}$, correct
+to six decimals and roughly 4,700 times more accurate for twice the digits.
+
+Both write-ups are in [Discussions](https://github.com/Amey-Thakur/PI/discussions),
+and the full history is in the atlas.
+
+<br>
+
 ---
 
 <br>
