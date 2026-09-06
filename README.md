@@ -34,6 +34,10 @@ can trust.
 [![Technology](https://img.shields.io/badge/Technology-Python_%7C_JavaScript_%7C_Rust-8250DF)](https://github.com/Amey-Thakur/PI)
 [![Developed by](https://img.shields.io/badge/Developed_by-Amey_Thakur-0969DA)](https://github.com/Amey-Thakur)
 
+<br>
+
+<img src=".github/social-preview.png" alt="PI: everything about the number pi in one place. A gamified site with eight interactive labs, a written atlas of ten chapters, one million verified decimals, twenty two working algorithms in Python, JavaScript and Rust, and twenty five challenges" width="100%">
+
 </div>
 
 ---
