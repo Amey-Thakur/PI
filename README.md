@@ -36,7 +36,9 @@ can trust.
 
 <br>
 
-<img src=".github/social-preview.png" alt="PI: everything about the number pi in one place. A gamified site with eight interactive labs, a written atlas of ten chapters, one million verified decimals, twenty two working algorithms in Python, JavaScript and Rust, and twenty five challenges" width="100%">
+<a href="https://amey-thakur.github.io/PI/" title="Play the site: eight labs, eight badges, a million digits, all offline once loaded">
+  <img src=".github/social-preview.png" title="Play the site: eight labs, eight badges, a million digits, all offline once loaded" alt="PI: everything about the number pi in one place. A gamified site with eight interactive labs, a written atlas of ten chapters, one million verified decimals, twenty two working algorithms in Python, JavaScript and Rust, and twenty five challenges" width="100%">
+</a>
 
 </div>
 
