@@ -1,0 +1,33 @@
+# π
+
+> Everything about the number pi: a gamified site, a written atlas, verified
+> digits, working algorithms, and 25 challenges. One place to learn, play,
+> and compute.
+
+Author: Amey Thakur
+Licence: CC BY 4.0, attribution required
+Repository created: 19 July 2026
+Work dated: 18 July 2026
+
+## What is in this repository
+
+- algorithms, 23 files
+- atlas, 12 files
+- challenges, 26 files
+- data, 6 files
+- docs, 26 files
+- scripts, 4 files
+- DIGITS.md
+
+## Subject terms
+
+algorithms, bbp-formula, challenges, chudnovsky, digits, education,
+github-pages, interactive, math, mathematics, monte-carlo, number-theory,
+pi, pi-day, spigot-algorithm, visualization
+
+## Where this sits
+
+- This repository: https://github.com/Amey-Thakur/PI
+- Project page: https://amey-thakur.github.io/PI/
+- Author: https://github.com/Amey-Thakur
+- Research notes and reflections: https://amey-thakur.github.io/
